@@ -22,3 +22,19 @@ describe ('1-1 add and sub', function() {
   });
 });
 
+
+
+describe ('1-2 erase max', function() {
+  var eraseMax = require('../1_2_eraseMax').eraseMax;
+  describe('#eraseMax()', function() {
+    it ('1 3 2 should return 1 2', function() {
+      eraseMax('3\n1 3 2').should.equal('1 2');
+    });
+    it ('4 1 4 2 4 3 4 should return 4 1 4 2 3 4', function() {
+      eraseMax('7\n4 1 4 2 4 3 4').should.equal('4 1 4 2 3 4');
+    });
+    it ('1 1 1 4 1 4 2 4 3 4 should return 1 1 1 4 1 4 2 3 4', function() {
+      eraseMax('10\n1 1 1 4 1 4 2 4 3 4').should.equal('1 1 1 4 1 4 2 3 4');
+    });
+  });
+});
