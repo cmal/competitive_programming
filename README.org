@@ -1,0 +1,3 @@
+* Competitive Programming
+
+This is the practices of Competitive Programming course of coursera.org.
