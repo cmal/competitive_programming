@@ -50,6 +50,9 @@ describe ('1-3 increment', function() {
     it ('9999 should return 5', function() {
       increment('9999').should.equal(5);
     });
+    it ('19999 should return 5', function() {
+      increment('19999').should.equal(5);
+    });
 
     var million9 = '9'.repeat(1000000);
     it ('10^1E6 - 1 should return 1E6+1', function() {
