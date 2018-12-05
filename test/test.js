@@ -103,10 +103,16 @@ describe('2-4 expression evaluation', function() {
 
 
 describe('2-3 sum of minimums', function() {
-  var sumOfMin = require('../2_3_sumOfMin').expEval;
+  var sumOfMin = require('../2_3_sumOfMin').sumOfMin;
   describe('#sumOfMin()', function() {
     it ('3 1 2 3 is 16', function() {
       sumOfMin('3 1 2 3').should.equal(16);
+    });
+    it ('3 2 1 4 is 17', function() {
+      sumOfMin('3 2 1 4').should.equal(17);
+    });
+    it ('1 2 3 4 is 20', function() {
+      sumOfMin('1 2 3 4').should.equal(20);
     });
   });
 });
