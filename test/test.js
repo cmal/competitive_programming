@@ -87,3 +87,54 @@ describe ('1-4 straight flush', function() {
     });
   });
 });
+
+
+describe('2-4 expression evaluation', function() {
+  var expEval = require('../2_4_expEval').expEval;
+  describe('#expEval()', function() {
+    it ('1+2+3+4 is 10', function() {
+      expEval('1+2+3+4').should.equal(10);
+    });
+    it ('1-2+3-4 is -2', function() {
+      expEval('1-2+3-4').should.equal(-2);
+    });
+  });
+});
+
+
+describe('2-3 sum of minimums', function() {
+  var sumOfMin = require('../2_3_sumOfMin').expEval;
+  describe('#sumOfMin()', function() {
+    it ('3 1 2 3 is 16', function() {
+      sumOfMin('3 1 2 3').should.equal(16);
+    });
+  });
+});
+
+describe('2-2 the king', function() {
+  var theKing = require('../2_2_theKing').theKing;
+  describe('#theKing()', function() {
+    it ('1 2 is 1', function() {
+      theKing('1 2').should.equal(1);
+      theKing('2 1').should.equal(1);
+    });
+    it ('3 3 is 8', function() {
+      theKing('3 3').should.equal(8);
+    });
+    it ('4 4 is 12', function() {
+      theKing('4 4').should.equal(12);
+    });
+  });
+});
+
+describe('2-1 the cheapest permutation', function() {
+  var cheapestPerm = require('../2_1_cheapestPerm').cheapestPerm;
+  describe('#cheapestPerm()', function() {
+    it ('3\n0 1 2\n1 0 4\n2 4 0 should correct', function() {
+      cheapestPerm('3\n0 1 2\n1 0 4\n2 4 0').should.equal('2 1 3');
+    });
+    it ('4\n0 1 1 1\n1 0 1 1\n1 1 0 1\n1 1 1 0 should correct', function() {
+      cheapestPerm('4\n0 1 1 1\n1 0 1 1\n1 1 0 1\n1 1 1 0').should.equal('1 2 3 4');
+    });
+  });
+});
